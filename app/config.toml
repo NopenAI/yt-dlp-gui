@@ -20,7 +20,15 @@ subtitles = false
 thumbnail = false
 
 [presets.mp3]
-args = ["--extract-audio", "--audio-format", "mp3", "--audio-quality", "0"]
+args = ["--extract-audio", "--audio-format", "m4a", "--audio-quality", "0"]
+path = ""
+filename = "%(title)s.%(ext)s"
+sponsorblock = 0
+metadata = false
+thumbnail = false
+
+[presets.mp3-low]
+args = ["--extract-audio", "--audio-format", "mp3", "--audio-quality", "3"]
 path = ""
 filename = "%(title)s.%(ext)s"
 sponsorblock = 0
