@@ -2,35 +2,44 @@
 format = 0
 
 [presets.best]
-args = ["-f", "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"]
-path = ""
-filename = "%(title)s.%(ext)s"
+args = [ "-f", "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b",]
+path = "F:/Video/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
 sponsorblock = 0
 metadata = false
 subtitles = false
 thumbnail = false
 
-[presets.mp4]
-args = ["-f", "bv*[vcodec^=avc]+ba[ext=m4a]/b"]
-path = ""
-filename = "%(title)s.%(ext)s"
-sponsorblock = 0
+[presets.video-best]
+args = [ "-f", "bv*[vcodec^=avc]+ba[ext=m4a]/b",]
+path = "F:/Video/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
+sponsorblock = 1
 metadata = false
 subtitles = false
-thumbnail = false
+thumbnail = true
 
-[presets.mp3]
-args = ["--extract-audio", "--audio-format", "m4a", "--audio-quality", "0"]
-path = ""
-filename = "%(title)s.%(ext)s"
-sponsorblock = 0
+[presets.video-worst]
+args = [ "-f", "wv*+wa/w",]
+path = "F:/Video/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
+sponsorblock = 1
 metadata = false
-thumbnail = false
+subtitles = false
+thumbnail = true
 
-[presets.mp3-low]
-args = ["--extract-audio", "--audio-format", "mp3", "--audio-quality", "3"]
-path = ""
-filename = "%(title)s.%(ext)s"
-sponsorblock = 0
+[presets.audio-best]
+args = [ "-f", "--extract-audio", "--audio-format", "m4a", "--audio-quality", "0",]
+path = "F:/Sounds/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
+sponsorblock = 1
+metadata = false
+thumbnail = true
+
+[presets.audio-worst]
+args = [ "-f", "worstaudio[acodec^=aac]/worstaudio[acodec^=mp4a.40.1]/worstaudio[acodec^=mp4a.40.2]/worstaudio[acodec^=opus]/worstaudio[acodec^=vorbis]/worstaudio",]
+path = "F:/Sounds/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
+sponsorblock = 1
 metadata = false
 thumbnail = false
