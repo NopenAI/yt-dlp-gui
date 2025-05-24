@@ -36,6 +36,14 @@ sponsorblock = 1
 metadata = false
 thumbnail = true
 
+[presets.audio-mid]
+args = [ "-f", "wa*.2",]
+path = "F:/Sounds/Consume/Youtube/__temp__"
+filename = "%(title)s. -- (%(id)s).%(ext)s"
+sponsorblock = 1
+metadata = false
+thumbnail = true
+
 [presets.audio-worst]
 args = [ "-f", "worstaudio[acodec^=aac]/worstaudio[acodec^=mp4a.40.1]/worstaudio[acodec^=mp4a.40.2]/worstaudio[acodec^=opus]/worstaudio[acodec^=vorbis]/worstaudio",]
 path = "F:/Sounds/Consume/Youtube/__temp__"
